@@ -1,0 +1,5 @@
+requests
+json
+pylint
+bandit
+```

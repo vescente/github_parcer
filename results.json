@@ -1,0 +1,22 @@
+{
+    "https://github.com/DanteOnline/unsafe-python-code": {
+        "words": [],
+        "unsafe_modules": [
+            {
+                "name": "eval_error.py",
+                "unsafe code type": "Use of eval() can execute arbitrary code.",
+                "status": "Contains vulnerability"
+            },
+            {
+                "name": "eval_warning.py",
+                "unsafe code type": "Use of eval() can execute arbitrary code.",
+                "status": "Contains vulnerability"
+            },
+            {
+                "name": "sqlinjection_error.py",
+                "unsafe code type": "Use of exec() can execute arbitrary code.",
+                "status": "Contains vulnerability"
+            }
+        ]
+    }
+}
