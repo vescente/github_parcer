@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Search</title>
+<!--    подключение css-->
+    <link href="main.css" rel="stylesheet">
+
+</head>
+<body>
+
+    <h1>Search form</h1>
+    <!--    form для отправки данных на сервер-->
+    <form action="results.html">
+<!--        input - поля для ввода данных или кнопки-->
+<!--        type - тип поля, value-его значение, placeholder-подсказка-->
+        <input type="text" name="query_string" value="" placeholder="search">
+        <br>
+        <br>
+<!--        submit - кнопка-->
+<!--        select - выпадающий список-->
+        <p><select name="where">
+                <option value="all">All</option>
+                <option value="company">In company name</option>
+                <option selected value="name">In vacancy name</option>
+            </select></p>
+        <input type="submit" value="Find vacancies">
+    </form>
+    <hr>
+
+<p class="proverb">
+    Work is not a wolf, but let the force be with you
+</p>
+
+    <a href="index.html">Back to main page</a>
+</body>
+</html>
