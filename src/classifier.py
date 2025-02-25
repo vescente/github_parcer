@@ -53,34 +53,3 @@ class CodeClassifier:
                     'status': 'Potentially unsafe' if 'Potential' in ', '.join(findings) else 'Contains vulnerability'
                 })
         return unsafe_modules
-
-    def classify_repositories(self, repositories):
-        for repo in repositories:
-            repo_name = repo['full_name']
-            # Assume this method retrieves code
-            code_snippet = self.get_code_snippet(repo_name)
-            findings = self.analyze_code(code_snippet)
-            self.results.append({
-                'repository': repo_name,
-                'findings': findings
-            })
-
-    def get_code_snippet(self, repo_name):
-        # Placeholder for actual code retrieval logic
-        return ""  # This should return the actual code snippet from the repository
-
-    def save_results(self, filepath):
-        import json
-        with open(filepath, 'w') as f:
-            json.dump(self.results, f)
-
-
-if __name__ == '__main__':
-    classifier = CodeClassifier("example_repo")
-    repositories = [
-        {'full_name': 'vescente/project_loto'},
-        {'full_name': 'DanteOnline/unsafe-python-code'}
-    ]
-    classifier.classify_repositories(repositories)
-    classifier.save_results('results.json')
-    print('Results saved to results.json')

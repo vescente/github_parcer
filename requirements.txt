@@ -2,4 +2,5 @@ requests
 json
 pylint
 bandit
+Flask
 ```
