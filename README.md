@@ -5,25 +5,29 @@ This project classifies GitHub repositories to identify those containing unsafe 
 ## Project Structure
 
 ```
-github_parcer 
-├── app.py # Entry point of the Flask application 
-├── src 
-│ ├── classifier.py # Logic for classifying unsafe code 
-│ ├── config.py # Configuration file for the application 
-│ ├── github_api.py # Functions to interact with the GitHub API 
-├── templates # HTML templates for the Flask application 
-│ ├── base.html 
-│ ├── index.html 
-│ ├── form.html 
-│ └── contacts.html 
-├── static # Static files (CSS, JS, images) 
-│ ├── css 
-│     └── styles.css 
-│ └── js 
-│     └── scripts.js 
-├── requirements.txt # Project dependencies 
-├── .gitignore # Files and directories to ignore in Git 
-└── README.md # Project documentation
+github_parcer
+├── app.py               # Entry point of the Flask application
+├── src
+│   ├── classifier.py    # Logic for classifying unsafe code
+│   ├── config.py        # Configuration file for the application
+│   ├── github_api.py    # Functions to interact with the GitHub API
+│   ├── models.py        # Database models
+│   ├── main.py          # Main script for running the analysis
+│   └── db               # Directory for the SQLite database
+│       └── parcer_result.db  # SQLite database file
+├── templates            # HTML templates for the Flask application
+│   ├── base.html
+│   ├── index.html
+│   ├── form.html
+│   └── contacts.html
+├── static               # Static files (CSS, JS, images)
+│   ├── css
+│   │   └── styles.css
+│   └── js
+│       └── scripts.js
+├── requirements.txt     # Project dependencies
+├── .gitignore           # Files and directories to ignore in Git
+└── README.md            # Project documentation
 ```
 
 ## Installation
@@ -64,7 +68,7 @@ github_parcer
 
 2. Open your browser and go to `http://127.0.0.1:5000/` to access the application.
 
-3. Use the web interface to enter the URL of a GitHub repository for analysis.
+3. Use the web interface to enter the URL of a GitHub repository for analysis.(try url: https://github.com/DanteOnline/unsafe-python-code)
 
 4. The application will fetch the repository, analyze the code for unsafe patterns, and display the results on the web page.
 

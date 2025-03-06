@@ -1,6 +1,6 @@
 import requests
 import base64
-from config import GITHUB_TOKEN
+from src.config import GITHUB_TOKEN
 
 GITHUB_API_URL = "https://api.github.com"
 
