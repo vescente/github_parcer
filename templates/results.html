@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Analysis Results for "{{ repo_url }}"</h1>
+{% for module in unsafe_modules %}
+<div class="job-listing">
+    <h2>{{ module.name }}</h2>
+    <p><strong>Unsafe Code Type:</strong> {{ module['unsafe code type'] }}</p>
+    <p><strong>Status:</strong> {{ module.status }}</p>
+</div>
+{% endfor %}
+<a href="/">Back to search</a>
+{% endblock %}
